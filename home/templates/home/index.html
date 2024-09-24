@@ -1,0 +1,85 @@
+{% extends "layout/base.html" %}
+{% load static %}
+{% block head %}
+    <meta name="description" content="Presentation and home page">
+    <link rel="stylesheet" href="{% static 'home/index.css' %}">
+    <link rel="stylesheet" href="{% static 'home/stars.css' %}">
+    <!-- Alpine Plugins -->
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/@alpinejs/resize@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+{% endblock %}
+{% block title %}Home - David{% endblock %}
+{% block body %}
+    <body class="dark">
+        <header>
+            <!-- <nav class="routing"> -->
+            <!--     <a href="#entry" aria-label="Home"> -->
+            <!--         <span class="nf nf-fa-home" /> -->
+            <!--     </a> -->
+            <!-- </nav> -->
+            <nav class="links"
+                 x-data="{ open: false }"
+                 x-resize="open &= $width < 768"
+                 x-init="$watch('open', open => document.body.style.overflowY = open ? 'hidden' : 'auto')">
+                <span class="nf nf-fa-burger" x-on:click="open = true" x-show="!open"></span>
+                <span class="nf nf-md-ice_pop" x-on:click="open = false" x-show="open"></span>
+                <ol :class="open || 'hidden'">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            <section id="entry">
+                entry
+            </section>
+            <section id="about">
+                mini about
+            </section>
+            <section id="blog">
+                public blog
+            </section>
+            <section id="portfolio">
+                portfolio
+            </section>
+        </main>
+        <footer>
+            <div class="socials">
+                <a href="https://github.com/David21NP"
+                   target="_blank"
+                   aria-label="Github">
+                    <span class="nf nf-md-github" />
+                </a>
+                <a href="https://www.instagram.com/nicholas_david21"
+                   target="_blank"
+                   aria-label="Instagram">
+                    <span class="nf nf-md-instagram" />
+                </a>
+                <a href="https://www.linkedin.com/in/david-pardo-2102"
+                   target="_blank"
+                   aria-label="Linkedin">
+                    <span class="nf nf-md-linkedin" />
+                </a>
+            </div>
+            <div class="copy">
+                <span>© <span x-init x-text="new Date().getFullYear()"></span> David C.</span>
+            </div>
+        </footer>
+        <div class="sky">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+            <div class="comet"></div>
+        </div>
+    </body>
+{% endblock %}

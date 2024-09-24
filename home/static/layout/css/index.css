@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  /* font-size: 16px; */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  opacity: 100%;
+  /* font-weight: 500; */
+  /* font-style: normal; */
+  /* font-variation-settings: "wdth" 100; */
+}
+
+
+.light {
+  /* forces light color-scheme */
+  color-scheme: light;
+}
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
+}
+

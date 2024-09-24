@@ -1,0 +1,215 @@
+:root {
+  --primary-color: hsl(261, 73%, 23%);
+
+  /* Analogous */
+  --primary-light-color: hsl(231, 73%, 23%);
+  --primary-dark-color: hsl(291, 73%, 23%);
+
+  /* Complementary */
+  /* --complemetary-color: hsl(81, 73%, 23%); */
+  --complemetary-color: hsl(142, 71%, 45%);
+
+  /* Triadic */
+  --secondary-color: hsl(321, 73%, 23%);
+  --tertiary-color: hsl(21, 73%, 23%);
+  --tertiary-color-text: hsl(21, 73%, 53%);
+
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  /* height: 100%; */
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  padding-bottom: 0;
+  /* background-color: #000; */
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--primary-light-color) 0%,
+    var(--primary-color) 100%
+  );
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+header a {
+  /* color: white; */
+  color: var(--complemetary-color);
+}
+
+header > nav.routing {
+  align-content: center;
+}
+
+header > nav.routing span {
+  padding: 0.5rem 0.75rem;
+  font-size: 1.75rem;
+}
+
+header > nav.links {
+  /* position: relative; */
+}
+
+header > nav.links > span.nf {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 56px;
+  padding: 0.5rem 0.75rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+header > nav.links > ol {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  /* width: 300px; */
+  width: 100vw;
+  height: 100vh;
+  /* margin: -100px 0 0 -50px; */
+  margin: 0;
+  padding: 2rem;
+  padding-top: 3rem;
+
+  background: rgba(0, 0, 0, 0.8);
+  /* opacity: 80%; */
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 100% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+header > nav.links > ol.hidden {
+  transform: none;
+}
+
+main {
+  padding: 2rem 0 1rem 0;
+}
+
+main > section {
+  /* margin: 4rem 0; */
+  height: 100vh;
+}
+
+footer {
+  /* margin: 2rem 0; */
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+  border-top: solid 2px var(--complemetary-color);
+}
+
+footer > div.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  justify-content: space-around;
+}
+
+footer > div.socials a {
+  color: var(--complemetary-color);
+}
+
+footer > div.socials span {
+  font-size: 2rem;
+}
+
+footer > div.copy {
+  display: flex;
+  justify-content: center;
+}
+
+/* 'sm': '640px', */
+@media (min-width: 640px) {
+  body {
+    max-width: 640px;
+  }
+}
+
+/* 'md': '768px', */
+@media (min-width: 768px) {
+  body {
+    max-width: 768px;
+    background: radial-gradient(
+      farthest-corner at top left,
+      var(--primary-light-color),
+      var(--primary-color)
+    );
+  }
+
+  header > nav.links > span.nf-fa-burger {
+    display: none;
+  }
+
+  header > nav.links > ol {
+    gap: 2rem;
+    flex-direction: row;
+    font-size: 1rem;
+
+    position: initial;
+    width: initial;
+    height: initial;
+    margin: initial;
+    padding: initial;
+    padding-top: initial;
+
+    background: initial;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform: none;
+    z-index: 0;
+  }
+
+  footer > div.socials {
+    justify-content: center;
+  }
+}
+
+/* 'lg': '1024px', */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+}
+
+/* 'xl': '1280px', */
+@media (min-width: 1280px) {
+  body {
+    max-width: 1280px;
+  }
+}
+
+/* '2xl': '1536px', */
+@media (min-width: 1536px) {
+  body {
+    max-width: 1536px;
+  }
+}

@@ -1,0 +1,10 @@
+{% extends "layout/base.html" %}
+{% load markdown_extras %}
+{% block body %}
+    <h1>In the blog</h1>
+    <div>
+        <h1>{{ object.title }}</h1>
+        <p>{{ post.author }} | {{ post.created_on }}</p>
+        <article>{{ object.content | markdown | safe }}</article>
+    </div>
+{% endblock %}
