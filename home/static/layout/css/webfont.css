@@ -22,15 +22,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.nf-fa-home:before {
-  content: "\f015";
-}
-.nf-fa-burger:before {
-  content: "\ef82";
-}
-.nf-md-ice_pop:before {
-  content: "\f0efd";
-}
 .nf-md-github:before {
   content: "\f02a4";
 }
