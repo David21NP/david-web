@@ -1,0 +1,31 @@
+{
+  "short_name": "MDN",
+  "name": "MDN Web Docs",
+  "icons": [
+    {
+      "src": "../svg/logo-square.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "../img/wide.png",
+      "sizes": "1846x925",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Homescreen of Awesome App"
+    },
+    {
+      "src": "../img/narrow.png",
+      "sizes": "380x816",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "List of Awesome Resources"
+    }
+  ]
+}

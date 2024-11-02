@@ -2,6 +2,7 @@
 {% load static %}
 {% block head %}
     <meta name="description" content="Presentation and home page">
+    <link rel="manifest" href="{% static 'layout/js/manifest.json' %}" />
     <link rel="stylesheet" href="{% static 'home/index.css' %}">
     <link rel="stylesheet" href="{% static 'home/stars.css' %}">
     <!-- Alpine Plugins -->
@@ -31,7 +32,7 @@
         </header>
         <main>
             <section id="entry">
-                entry
+                <img src="{% static 'layout/svg/logo-wide.svg' %}" alt="Logo wide">
             </section>
             <section id="about">
                 mini about

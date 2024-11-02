@@ -70,6 +70,10 @@ main > section {
   height: 100vh;
 }
 
+main > section#entry > img.xs {
+  display: initial;
+}
+
 footer {
   /* margin: 2rem 0; */
   padding: 2rem 0;
